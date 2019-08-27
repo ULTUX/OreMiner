@@ -4,3 +4,5 @@ main: pl.bullcube.ultux.veinminer.Main
 api-version: 1.14
 version: 1.0
 commands:
+  blockbreak:
+
