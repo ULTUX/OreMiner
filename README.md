@@ -1,4 +1,5 @@
 #  <img src="https://gamepedia.cursecdn.com/minecraft_gamepedia/9/97/Diamond_Ore.png" height=50 width=50>OreMiner
+ ![](https://img.shields.io/github/v/release/ULTUX/OreMiner) ![](https://img.shields.io/github/downloads/ULTUX/OreMiner/total) ![](https://img.shields.io/github/issues/ULTUX/OreMiner) ![](https://img.shields.io/github/commit-activity/m/ULTUX/OreMiner) ![](https://img.shields.io/github/license/ULTUX/OreMiner)
 ## What is OreMiner?
 This is a source code to **Minecraft server Java plugin**. It frees players from mining whole veins of ores or every log in the tree.  
 When destroying an ore block, whole vein gets broken, dropping its contents in vein location the same with trees.  
