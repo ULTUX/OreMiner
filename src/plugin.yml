@@ -1,6 +1,6 @@
 name: VeinMiner
 description: This plugins mines ore at once.
-main: pl.bullcube.ultux.veinminer.Main
+main: pl.bullcube.ultux.oreminer.Main
 api-version: 1.14
 version: 1.0
 commands:

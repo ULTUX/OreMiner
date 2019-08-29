@@ -1,4 +1,4 @@
-package pl.bullcube.ultux.veinminer;
+package pl.bullcube.ultux.oreminer;
 
 
 
@@ -32,12 +32,12 @@ public class Main extends JavaPlugin
 
     @Override
     public void onDisable() {
-        Bukkit.getServer().getConsoleSender().sendMessage("[VeinMiner] Plugin loaded and enabled.");
+        Bukkit.getServer().getConsoleSender().sendMessage("[OreMiner] Plugin loaded and enabled.");
     }
 
     @Override
     public void onEnable() {
-        Bukkit.getServer().getConsoleSender().sendMessage("[VeinMiner] Plugin unloaded and disabled.");
+        Bukkit.getServer().getConsoleSender().sendMessage("[OreMiner] Plugin unloaded and disabled.");
         Bukkit.getPluginManager().registerEvents(new Events(), this);
         pluginInstance = this;
     }

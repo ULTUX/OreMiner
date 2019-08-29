@@ -1,4 +1,4 @@
-package pl.bullcube.ultux.veinminer;
+package pl.bullcube.ultux.oreminer;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;
