@@ -218,46 +218,46 @@ public class Events implements Listener {
 
     private boolean dropAndBreak(Block block, ItemStack tool){
         if (block.getType().equals(Material.IRON_ORE) && (tool.getType().equals(Material.STONE_PICKAXE) || tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE) || tool.getType().equals(Material.GOLDEN_PICKAXE))) {
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.IRON_ORE));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.IRON_ORE));
             return true;
         }
         if (block.getType().equals(Material.COAL_ORE)){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.COAL, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.COAL, howMuchToDrop(tool, block.getType())));
 
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(0, 2));
             return true;
         }
         if (block.getType().equals(Material.REDSTONE_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE) || tool.getType().equals(Material.GOLDEN_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.REDSTONE, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.REDSTONE, howMuchToDrop(tool, block.getType())));
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(1, 5));
             return true;
         }
         if (block.getType().equals(Material.EMERALD_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.EMERALD, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.EMERALD, howMuchToDrop(tool, block.getType())));
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(3, 7));
             return true;
         }
         if (block.getType().equals(Material.GOLD_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.GOLD_ORE));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.GOLD_ORE));
             return true;
         }
         if (block.getType().equals(Material.DIAMOND_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.DIAMOND, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.DIAMOND, howMuchToDrop(tool, block.getType())));
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(3, 7));
             return true;
         }
         if (block.getType().equals(Material.LAPIS_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.LAPIS_LAZULI, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.LAPIS_LAZULI, howMuchToDrop(tool, block.getType())));
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(2, 5));
             return true;
         }
         if (block.getType().equals(Material.NETHER_QUARTZ_ORE) && (tool.getType().equals(Material.IRON_PICKAXE) || tool.getType().equals(Material.DIAMOND_PICKAXE))){
-            block.getWorld().dropItem(block.getLocation(), new ItemStack(Material.QUARTZ, howMuchToDrop(tool, block.getType())));
+            block.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.QUARTZ, howMuchToDrop(tool, block.getType())));
             ExperienceOrb exp = block.getWorld().spawn(block.getLocation(), ExperienceOrb.class);
             exp.setExperience(Chance.randBetween(2, 5));
             return true;
@@ -368,7 +368,7 @@ public class Events implements Listener {
             }
             int finalI = i;
             Block toBreak = stack.get(finalI);
-            toBreak.getWorld().dropItem(toBreak.getLocation(), new ItemStack(toBreak.getType()));
+            toBreak.getWorld().dropItemNaturally(toBreak.getLocation(), new ItemStack(toBreak.getType()));
 
             Bukkit.getScheduler().scheduleSyncDelayedTask(Main.pluginInstance, new Runnable() {
                 @Override
